@@ -1,0 +1,17 @@
+.info {
+    font-family: "sans-serif", helvetica;
+    font-size: 30pt;
+    text-align: center;
+}
+.about {
+    background-color: #b0ffc5;
+}
+.home {
+    background-color: #c9f7ff;
+}
+.jokes {
+    background-color: #fcc5d9;
+}
+.riddles {
+    background-color: #fceec5;
+}

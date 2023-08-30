@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="icon" type="png" href="logo.png"/>
+        <title>Jokes Online - Riddles</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                const riddles = [
+                    "What word is always spelled wrong?",
+                    "What kind of ship has two mates but no captain?",
+                    "What two words, added together, contain the most letters?",
+                    "I have 13 hearts, but no lungs or stomach. What am I?",
+                    "Three doctors all say Robert is their brother. Robert says he has no brothers. Who is lying?",
+                    "Which letter of the alphabet has the most water?",
+                    "What type of cheese is made backward?",
+                    "What is the one thing everyone can agree is between heaven and earth?",
+                    "What has a bottom at the top?",
+                    "If you drop a yellow hat in the Red Sea, what does it become?",
+                    "What color is the wind?",
+                    "What tastes better than it smells?",
+                    "What has four wheels and flies?",
+                    "I can be cracked, I can be made. I can be told, I can be played. What am I?"
+                ]
+                const answers = [
+                    "Wrong.",
+                    "A relationship.",
+                    "Post Office.",
+                    "A deck of cards.",
+                    "None of them. They are his sisters.",
+                    "The 'C'.",
+                    "Edam.",
+                    "The word 'and'.",
+                    "Your legs.",
+                    "Wet.",
+                    "Blew.",
+                    "Your tongue.",
+                    "A garbage truck.",
+                    "A joke."
+                ]
+                document.querySelector('#form').addEventListener('click', function(){
+                    let num = Math.floor(Math.random() * 13);
+                    document.querySelector('#print-question-here').innerHTML = riddles[num];
+                    document.querySelector('#button-appear').innerHTML = '<button class="btn btn-warning" id="answer">Show answer?'
+                    document.querySelector('#answer').addEventListener('click', function() {
+                        document.querySelector('#print-answer-here').innerHTML = answers[num];
+                    })
+                    event.preventDefault();
+                })
+            })
+        </script>
+    </head>
+    <body class="riddles">
+
+        <!-- this is the navbar - should be on every page - links will need to be changed when domain is -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="#" class="navbar-brand">
+                    Jokes Online - Riddles
+                </a>
+                <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#target"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="target">
+                    <ul class="navbar-nav mx-left text-center">
+                        <li>
+                            <a class="nav-link" href="https://thomasandersen14-miniature-umbrella-x7x777x74rq3p5q4-8080.app.github.dev/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="https://thomasandersen14-miniature-umbrella-x7x777x74rq3p5q4-8080.app.github.dev/about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="https://thomasandersen14-miniature-umbrella-x7x777x74rq3p5q4-8080.app.github.dev/jokes.html">Jokes</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="https://thomasandersen14-miniature-umbrella-x7x777x74rq3p5q4-8080.app.github.dev/riddles.html">Riddles</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- this is our main page - all links will need to be changed I want it to be the text I have written centered over an image of the garden -->
+
+            <div class="container-fluid">
+                <div class="container bg-light rounded-4 text-center">
+                    <h5 class="display-2 mx-4 my-4 px-4 py-4">Are you ready for a riddle?</h5>
+                    <form>
+                        <button class="btn btn-warning" id="form">
+                            YES!
+                        </button>
+                    </form>
+                    <br>
+                    <p id="print-question-here"></p>
+                    <br>
+                    <span id="button-appear"></span>
+                    <br>
+                    <br>
+                    <p id="print-answer-here"></p>
+                    <br>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
